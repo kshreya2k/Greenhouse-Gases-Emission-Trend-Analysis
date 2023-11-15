@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../static/script.js"></script>
+
+    <title>CO2 and O3 Emission Viewer</title>
+</head>
+<body>
+    <header>
+        <h1>C02 and 03 Emission Viewer</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showTable('co2')">CO2 Emission</a></li>
+                <li><a href="##" onclick="showTable('o3')">O3 Emission</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="co2Table">
+        <h2>CO2 Emission Table</h2>
+        
+        <input type="text" id="co2Input" onkeyup="filterTable('co2')" placeholder="Search for a country...">
+        <table id="co2MyTable">
+            <!-- CO2 Emission table columns -->
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Country</th>
+                    <th onclick="sortTable(1)">Code</th>
+                    <th onclick="sortTable(2)">Calling Code</th>
+                    <th onclick="sortTable(3)">Year</th>
+                    <th onclick="sortTable(4)">CO2 Emission (Tons)</th>
+                    <th onclick="sortTable(5)">Population</th>
+                    <th onclick="sortTable(6)">Area</th>
+                    <th onclick="sortTable(7)">% of World</th>
+                    <th onclick="sortTable(8)">Density (km²)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                    <tr>
+                        <td>{{ row.Country }}</td>
+                        <td>{{ row.Code }}</td>
+                        <td>{{ row.Calling_Code }}</td>
+                        <td>{{ row.Year }}</td>
+                        <td>{{ row.CO2_Emission }}</td>
+                        <td>{{ row.Population }}</td>
+                        <td>{{ row.Area }}</td>
+                        <td>{{ row.Percent_of_World }}</td>
+                        <td>{{ row.Density }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div id="o3Table">
+        <h2>O3 Emission Table</h2>
+        <input type="text" id="o3Input" onkeyup="filterTable('o3')" placeholder="Search for a country...">
+        <table id="o3MyTable">
+            <!-- O3 Emission table columns -->
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Country</th>
+                    <th onclick="sortTable(1)">City</th>
+                    <th onclick="sortTable(2)">AQI Value</th>
+                    <th onclick="sortTable(3)">AQI Category</th>
+                    <th onclick="sortTable(4)">CO AQI Value</th>
+                    <th onclick="sortTable(5)">CO AQI Category</th>
+                    <th onclick="sortTable(6)">Ozone AQI Value</th>
+                    <th onclick="sortTable(7)">Ozone AQI Category</th>
+                    <th onclick="sortTable(8)">NO2 AQI Value</th>
+                    <th onclick="sortTable(9)">NO2 AQI Category</th>
+                    <th onclick="sortTable(10)">PM2.5 AQI Value</th>
+                    <th onclick="sortTable(11)">PM2.5 AQI Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in dataozone %}
+                    <tr>
+                        <td>{{ row.Country }}</td>
+                        <td>{{ row.City }}</td>
+                        <td>{{ row.AQI_Value }}</td>
+                        <td>{{ row.AQI_Category }}</td>
+                        <td>{{ row.CO_AQI_Value }}</td>
+                        <td>{{ row.CO_AQI_Category }}</td>
+                        <td>{{ row.Ozone_AQI_Value }}</td>
+                        <td>{{ row.Ozone_AQI_Category }}</td>
+                        <td>{{ row.NO2_AQI_Value }}</td>
+                        <td>{{ row.NO2_AQI_Category }}</td>
+                        <td>{{ row.PM25_AQI_Value }}</td>
+                        <td>{{ row.PM25_AQI_Category }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+
+        </table>
+    </div>
+
+</body>
+</html>
