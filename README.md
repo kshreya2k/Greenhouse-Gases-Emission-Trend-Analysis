@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains a Data Science project focused on analyzing CO2 and O3 emissions worldwide from 1970 to 2020. The project aims to provide insights into the emission trends and their impact on the environment. The primary application of this analysis is a pollution viewer for CO2 and O3 emissions, allowing users to filter data by country.
+This repository contains a Data Science project focused on analyzing two datasets: Worlwide CO2 emission from 1970 to 2020 for popular countries and O3 emission with the highest [AQI](https://en.wikipedia.org/wiki/Air_quality_index) value over the world.  The project aims to provide insights into the emission trends and their impact on the environment. The primary application of this analysis is a pollution viewer for CO2 and O3 emissions, allowing users to filter data by country.
 
 ## Data
 
@@ -27,7 +27,7 @@ The first part of the analysis focuses on the trends of CO2 emissions over time 
 
 #### Graph 1: CO2 Emission Trends Over Time
 
-![CO2 Emission Trends](CO2_Emissions_Over_Time.jpg)
+![CO2 Emission Trends](C02_Emission_Over_Time.jpg) 
 
 ### 2. O3 Emission Analysis
 
@@ -45,9 +45,9 @@ The second part of the analysis explores O3 emissions, specifically highlighting
 
 For inquiries or feedback, please contact:
 
-- [Shreya Banik]
-- Email: [shreyabanik2k@gmail.com]
+- Name: Shreya Banik
+- Email: shreyabanik2k@gmail.com
 - GitHub: [kshreya2k](https://github.com/kshreya2k)
 
-I look forward to hearing from you!
+I look forward to hearing from you! 
 
